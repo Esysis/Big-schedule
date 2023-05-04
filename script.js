@@ -18,10 +18,18 @@ $(function () {
     }
 // retrieves the saved text from the selected hour
 const savedEvent = localStorage.getItem(`hour-${timeBlockHour}`);
-  if (savedEvent) {
-     $(this).find('textarea').val(savedEvent);
-    }
-  });
+if (savedEvent) {
+  $(this).find('textarea').val(savedEvent);
+}
+});
+// click event listener gets the time block, hour, and the text of the clicked save button
+$('.saveBtn').on('click', function () {
+const timeBlock = $(this).closest('.time-block');
+const timeBlockHour = timeBlock.attr('id').split('-')[1];
+const eventDescription = timeBlock.find('textarea').val();
+
+// saves the text in the local storage
+localStorage.setItem(`hour-${timeBlockHour}`, eventDescription);
+   });
 
 });
-
