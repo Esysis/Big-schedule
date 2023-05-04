@@ -8,7 +8,7 @@ Big schedule is very simple. The box to the right of the selected time you can f
 
 ## screenshot of deployed site
 
-![This is a screenshot of the password website](./Bigschedule.PNG.png)
+![This is a screenshot of the password website](./Bigschedule.png)
 
 # link to deployed site
 
